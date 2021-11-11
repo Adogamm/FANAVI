@@ -13,10 +13,13 @@ lenguaje = assistant.select_language()
 #T2S
 reader = text2speech_setted.Text2Speech
 reader.voice_assistant(lenguaje[0],lenguaje[1])
+sleep(5)
 
 #Presentacion
-sleep(5)
-assistant.presentation()
+if lenguaje[1] == "es":
+    pass
+elif lenguaje[1] == "en":
+    pass
 
 
 #DF

@@ -29,25 +29,3 @@ class Assistant:
                     
         except:
             pass
-
-    def presentation():
-        listener = sr.Recognizer()
-        try:
-            with sr.Microphone() as source:
-                while True:
-                    print("Escuchando...")
-                    voice = listener.listen(source)
-                    rec = listener.recognize_google(voice)
-                    if rec == "Presentate":
-                        voice_string = "¡Hola!, mi nombre es FANAVI y soy un pequeño asistente virtual"
-                        assistant_voice.voice_assistant(voice_string)
-                    elif rec == "adios":
-                        voice_string = "Hasta luego"
-                        assistant_voice.voice_assistant(voice_string)
-                        break
-                    else:
-                        voice_string = "Lo siento, no entendí"
-                        assistant_voice.voice_assistant(voice_string)
-        except:
-            pass
-

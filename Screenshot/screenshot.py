@@ -23,3 +23,15 @@ class Screenshot:
         #TODO Aqui se pasan las medidas de la captura
         route.crop() 
         route.save(r'C:\\Fanavi\\images\\cropped.png')
+       
+    # Definir el tamaño de la pantalla del usuario
+    def ScreenSize():
+        user32 = ctypes.windll.user32
+        try:
+            user32.SetProcessDPIAware()
+            ancho, alto = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+            print(ancho, alto)
+        except:
+            print("No se pudieron obtener las medidas")
+
+    ScreenSize()

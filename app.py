@@ -1,24 +1,31 @@
-# Asistente 
+# Imports 
+from time import sleep
 from Asistente import fanavi
+from Text2Speech import text2speech_setted
+# from Drop_files import delete
+# from Mkdir import create
+# from Screenshot import screenshot
 
-    #Seleccionar lenguaje
+#Seleccionar lenguaje para el asistente
 assistant = fanavi.Assistant
 lenguaje = assistant.select_language()
-print(lenguaje)
+
+#T2S
+reader = text2speech_setted.Text2Speech
+reader.voice_assistant(lenguaje[0],lenguaje[1])
+
+#Presentacion
+sleep(5)
+assistant.presentation()
 
 
 #DF
-# from Drop_files import delete
 # eliminar = delete.DeleteFiles
 
 #MKdir
-# from Mkdir import create
 # mkdir = create.Directories
 
 #Screenshot
-# from Screenshot import screenshot
 # captura = screenshot.Screenshot
 
-#T2S
-# from Text2Speech import text2Speech 
-# assistant_voice = text2Speech.Text2Speech
+

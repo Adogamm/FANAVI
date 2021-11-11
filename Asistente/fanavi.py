@@ -21,16 +21,16 @@ class Assistant:
                     voice = listener.listen(source)
                     rec = listener.recognize_google(voice)
                     if rec == "Espanol":
-                        return "es"
+                        return "El lenguaje que seleccionaste fue español","es"
                         break
                     elif rec == "English":
-                        return "en"
+                        return "The language you selected was English","en"
                         break
                     
         except:
             pass
 
-    def functioning():
+    def presentation():
         listener = sr.Recognizer()
         try:
             with sr.Microphone() as source:
@@ -38,8 +38,8 @@ class Assistant:
                     print("Escuchando...")
                     voice = listener.listen(source)
                     rec = listener.recognize_google(voice)
-                    if rec == "hola":
-                        voice_string = "¡Hola!, en que puedo ayudarte"
+                    if rec == "Presentate":
+                        voice_string = "¡Hola!, mi nombre es FANAVI y soy un pequeño asistente virtual"
                         assistant_voice.voice_assistant(voice_string)
                     elif rec == "adios":
                         voice_string = "Hasta luego"

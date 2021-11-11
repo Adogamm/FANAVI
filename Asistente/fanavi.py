@@ -31,7 +31,7 @@ class Assistant:
         except:
             pass
 
-    def funcionamiento():
+    def functioning():
         listener = sr.Recognizer()
         try:
             with sr.Microphone() as source:

@@ -28,7 +28,6 @@ class Assistant:
                         break
                     else:
                         break
-
         except:
             pass
 

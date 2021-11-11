@@ -7,7 +7,9 @@ import ctypes
 class Screenshot:
     #Tomar la captura de pantalla
     def TakeScreenshot():
-        im = pyautogui.screenshot()
+        #                          left, top, width, and height
+        # SCREEN = 1366 X 768
+        im = pyautogui.screenshot(region=(150,150,1040,600))
         try:
             im.save(r'C:\\Fanavi\\images\\screenshot.png')
             print("La captura se realizó correctamente")

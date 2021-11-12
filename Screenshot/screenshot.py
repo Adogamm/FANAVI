@@ -1,15 +1,19 @@
 import os
-from os import remove
 import pyautogui
-from PIL import Image
 import ctypes
+from time import sleep
+from os import remove
+from PIL import Image
+
+#1920x1080
 
 class Screenshot:
     #Tomar la captura de pantalla
     def TakeScreenshot():
+        sleep(3)
         #                          left, top, width, and height
         # SCREEN = 1366 X 768
-        im = pyautogui.screenshot(region=(150,150,1040,600))
+        im = pyautogui.screenshot(region=(300,150,1300,800))
         try:
             im.save(r'C:\\Fanavi\\images\\screenshot.png')
             print("La captura se realizó correctamente")
@@ -34,4 +38,8 @@ class Screenshot:
         except:
             print("No se pudieron obtener las medidas")
 
-    ScreenSize()
+    # ScreenSize()
+
+
+prueba = Screenshot
+prueba.TakeScreenshot()

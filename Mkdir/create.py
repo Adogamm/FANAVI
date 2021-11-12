@@ -20,6 +20,9 @@ class Directories:
         else:
             print("Se ha creado el directorio: %s " % directories)
 
+prueba = Directories
+prueba.CreateDir()
+
 
 
 

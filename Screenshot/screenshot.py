@@ -10,7 +10,7 @@ class Screenshot:
         sleep(3)
         #                          left, top, width, and height
         # SCREEN = 1366 X 768
-        im = pyautogui.screenshot(region=(450,150,950,800))
+        im = pyautogui.screenshot(region=(150,250,1200,200))
         try:
             im.save(r'C:\\FANAVI\\images\\screenshot.png')
             print("La captura se realizó correctamente")

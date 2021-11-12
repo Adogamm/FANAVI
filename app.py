@@ -15,8 +15,9 @@ lenguaje = assistant.select_language()
 
 #T2S
 reader = text2speech_setted.Text2Speech
-sleep(2)
+sleep(1)
 reader.voice_assistant(lenguaje[0],lenguaje[1])
+sleep(3)
 
 # Screenshot
 screenshot_taker = screenshot.Screenshot
@@ -29,9 +30,9 @@ image_text_en = images2text_en.Image2Text
 if lenguaje[1] == "es":
     new_assistant = spanish_assistant.SpanishAssistant
     presentacion = new_assistant.presentacion()
-    sleep(4)
+    sleep(2)
     reader.voice_assistant(presentacion,lenguaje[1])
-    sleep(4)
+    sleep(5)
     reader.voice_assistant("¿Qué puedo hacer por ti?",lenguaje[1])
     sleep(2)
     #Esperando instrucciones
@@ -42,11 +43,11 @@ if lenguaje[1] == "es":
             screenshot_taker.TakeScreenshot()
             resultado = image_text.image_to_text()
             reader.voice_assistant(resultado,lenguaje[1])
-            sleep(6)
-            reader.voice_assistant("¿Qué más puedo hacer por ti?",lenguaje[1])
+            sleep(25)
+            reader.voice_assistant("¿Puedo hacer algo más por ti?",lenguaje[1])
             sleep(3)
         elif instruccion == "hasta luego":
-            reader.voice_assistant("¡Hasta luego!",lenguaje[1])
+            reader.voice_assistant("Espero volver a saber de ti pronto",lenguaje[1])
             break
         else:
             reader.voice_assistant("¿Podrias repetirlo?",lenguaje[1])
@@ -57,7 +58,7 @@ elif lenguaje[1] == "en":
     presentacion = new_assistant.presentacion()
     sleep(4)
     reader.voice_assistant(presentacion,lenguaje[1])
-    sleep(4)
+    sleep(5)
     reader.voice_assistant("What can I do for you?",lenguaje[1])
     sleep(2)
     #Esperando instrucciones
@@ -68,7 +69,7 @@ elif lenguaje[1] == "en":
             screenshot_taker.TakeScreenshot()
             resultado = image_text.image_to_text()
             reader.voice_assistant(resultado,lenguaje[1])
-            sleep(6)
+            sleep(35)
             reader.voice_assistant("Can I do anything else for you?",lenguaje[1])
             sleep(3)
         elif instruccion == "bye":

@@ -9,5 +9,5 @@ class Image2Text:
     def image_to_text():
         path = r'C:\\Fanavi\\images\\screenshot.png'
         image = cv2.imread(path)
-        text = pytesseract.image_to_string(image,lang="spa")
+        text = pytesseract.image_to_string(image)
         return text

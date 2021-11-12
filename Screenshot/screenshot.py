@@ -34,9 +34,3 @@ class Screenshot:
             print(ancho, alto)
         except:
             print("No se pudieron obtener las medidas")
-
-    # ScreenSize()
-
-
-prueba = Screenshot
-prueba.TakeScreenshot()

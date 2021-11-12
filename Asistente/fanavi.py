@@ -11,8 +11,9 @@ class Assistant:
 
     def select_language():
         assistant_voice.voice_assistant("Vamos a configurar el idioma")
-        sleep(1)
+        sleep(3)
         assistant_voice.voice_assistant(launguage_select)
+        sleep(5)
         listener = sr.Recognizer()
         try:
             with sr.Microphone() as source:

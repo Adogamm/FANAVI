@@ -7,9 +7,9 @@ import ctypes
 # Crear los directorios del proyecto
 class Directories:
     def CreateDir():
-        directories = "/Fanavi"
-        images = "/Fanavi/images"
-        records = "/Fanavi/records"
+        directories = "C:/Users/guita/Desktop/FANAVI/Fanavi"
+        images = "C:/Users/guita/Desktop/FANAVI/Fanavi/images"
+        records = "C:/Users/guita/Desktop/FANAVI/Fanavi/records"
         #TODO Cambiar por condicionales
         try:
             os.mkdir(directories)

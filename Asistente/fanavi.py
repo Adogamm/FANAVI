@@ -10,9 +10,9 @@ class Assistant:
         pass
 
     def select_language():
-        final_language = ""
+        assistant_voice.voice_assistant("Vamos a configurar el idioma")
+        sleep(1)
         assistant_voice.voice_assistant(launguage_select)
-        sleep(5)
         listener = sr.Recognizer()
         try:
             with sr.Microphone() as source:
@@ -26,6 +26,21 @@ class Assistant:
                     elif rec == "English":
                         return "The language you selected was English","en"
                         break
+                    else:
+                        assistant_voice.voice_assistant("Lo siento, no entendí")
                     
+        except:
+            pass
+
+    def eschar_instrucciones():
+        listener = sr.Recognizer()
+        try:
+            with sr.Microphone() as source:
+                while True:
+                    print("Escuchando...")
+                    voice = listener.listen(source)
+                    rec = listener.recognize_google(voice)
+                    print(rec)
+                    return rec
         except:
             pass

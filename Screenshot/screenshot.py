@@ -1,9 +1,6 @@
-import os
 import pyautogui
 import ctypes
 from time import sleep
-from os import remove
-from PIL import Image
 
 #1920x1080
 
@@ -13,9 +10,9 @@ class Screenshot:
         sleep(3)
         #                          left, top, width, and height
         # SCREEN = 1366 X 768
-        im = pyautogui.screenshot(region=(300,150,1300,800))
+        im = pyautogui.screenshot(region=(450,150,950,800))
         try:
-            im.save(r'C:\\Fanavi\\images\\screenshot.png')
+            im.save(r'C:\\FANAVI\\images\\screenshot.png')
             print("La captura se realizó correctamente")
         except:
             print("La captura no fue tomada")
